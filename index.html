@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 5px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+        .red{
+            background-color: red;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+    </style>
+
+    <!-- <script>
+
+        $(document).ready(function(){
+
+            $("#colored-div").on({
+            click: function(){
+                $(this).css("background-color", "red");
+            },
+            mouseenter: function(){
+                $(this).css("background-color", "green");
+            },
+            mouseleave: function(){
+                $(this).css("background-color", "yellow");
+            }
+        });  
+
+        });
+
+    </script> -->
+</head>
+<body>
+
+    <!-- <p id="pra">This is a p Tag</p>
+
+    <!-- <button id="btn">Click</button> -->
+    <!-- <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <br><br>
+    <div id="colored-div" style="background-color: rgb(132, 165, 42); height: 100px; width: 100px;">
+        <p>
+            This is a p Tag <a href="https://www.google.com" id="link" class="red">Link</a>
+        </p>
+    </div>
+
+    <input type="text" id="input1"> -->
+
+<!-- 
+    <ul id="list">
+        <li>red</li>
+        <li>black</li>
+        <li>green</li>
+    </ul> -->
+<!-- 
+    <div id="box" class="box red"></div>
+
+    <button id="btn"> Click </button> -->
+<!-- 
+    <ul id="list">   <!-- (Grandparent) -->
+        <!-- <li>    <!-- (Parent) -->
+            <!-- <span id="span1">item 1</span>   <!-- (Child) -->
+        <!-- </li>
+        <li>    <!-- (Parent) -->
+            <!-- <span id="span2">item 2<span>
+        </li>
+    </ul>  -->
+
+
+    <!-- <ul id="list">
+        <li id="item3">child 1</li>
+        <li>child 2</li>
+        <li id="item1">child 3</li>
+        <li>child 4</li>
+        <li id="item2">child 5</li>
+        <li>child 6</li>
+    </ul>    -->
+
+
+    <p id="pra">This is a p Tag</p>
+    <button id="btn">Click me</button>
+
+    <script>
+        // $("#btn").click(function(){
+        //     $("#pra").hide();
+        //     $(this).hide();
+        // });
+
+        // $("#btn").dblclick(function(){
+        //     $(this).hide();
+        // });
+
+        // $("#colored-div").mouseenter(function(){
+        //     $("#pra").hide();
+        // });
+
+        // $("#colored-div").mouseleave(function(){
+        //     $("#pra").hide();
+        // });
+
+        // $("#colored-div").hover(function(){
+        //     $("#pra").hide();
+        // }, function(){
+        //     $("#pra").show();  
+        // });
+
+
+
+
+        // $("#colored-div").on({
+        //     click: function(){
+        //         $(this).css("background-color", "red");
+        //     },
+        //     mouseenter: function(){
+        //         $(this).css("background-color", "green");
+        //     },
+        //     mouseleave: function(){
+        //         $(this).css("background-color", "yellow");
+        //     }
+        // }); 
+        
+        
+        // $("#btn1").click(function(){
+        //     $("#colored-div").hide(1000);
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#colored-div").show(2000);
+        // });
+
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeOut(1000);
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#colored-div").fadeIn(2000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeToggle(1000);
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#colored-div").fadeIn(2000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeTo(1000, 0.3);
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#colored-div").fadeIn(2000);
+        // });
+
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").slideUp(1000);
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#colored-div").slideDown(2000);
+        // });
+
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").slideToggle(1000);
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#colored-div").slideDown(2000);
+        // });
+
+        //  $("#btn1").click(function(){
+        //     $("#colored-div").animate({
+        //         opacity: '0.5',
+        //         height: '500px',
+        //         width: '50px'
+        //     }, 5000);
+        // });
+
+        
+        // $("#btn2").click(function(){
+        //     $("#colored-div").stop();
+        // });
+
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").hide(3000, function(){
+        //         alert("Div hidden");
+        //     })
+        // });
+
+        
+        // $("#btn2").click(function(){
+        //     $("#colored-div").stop();
+        // });
+
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").css("background-color", "red").slideUp(2000).slideDown(1000);
+        // });
+
+
+
+            // $("#btn1").click(function(){
+            //    var txt = $("#colored-div").text();
+            //    alert(txt);
+            // });
+
+
+            // $("#btn1").click(function(){
+            //    var txt = $("#colored-div").html();
+            //    alert(txt); 
+            // });
+
+
+            // $("#btn1").click(function(){
+            // $("#colored-div").html("<h1>New Heading</h1>");
+            // });
+
+
+            
+            // $("#btn1").click(function(){
+            // $("#colored-div").text("New Heading");
+            // });
+
+
+        //     $("#btn1").click(function(){
+        //  var value = $("#input1").val();
+        //  alert(value);
+        //     });
+
+        // $("#btn1").click(function(){
+        // $("#input1").val("Shishank Tyagi");
+        //     });
+
+        
+    //     $("#btn1").click(function(){
+    //   var value = $("#link").attr("class");
+    //   alert(value);
+    //         });
+
+
+        
+    // $("#btn1").click(function(){
+    // $("#link").attr("class", "black");
+    //         });
+
+
+
+    // $("#btn1").click(function(){
+    // $("#link").attr({
+    //     "class": "black",
+    //     "href": "https://www.yahoo.com"
+    // });
+    //     });
+
+
+        // $("#list").append("<li>yellow</li>");
+
+        // $("#list").prepend("<li>yellow</li>");
+
+        // $("#list").after("<p>After Element</p>");
+
+        // $("#list").before("<p>Before Element</p>");
+
+
+        // $("#list").empty();
+
+        // $("#list").remove();
+
+
+
+        // $("#btn").click(function(){
+        //     $("#box").addClass("circle black");
+        // });
+
+
+        
+        // $("#btn").click(function(){
+        //     $("#box").removeClass("red");
+        // });
+
+
+        // $("#btn").click(function(){
+        //     $("#box").toggleClass("circle");
+        // });
+
+
+
+        
+        // $("#btn").click(function(){
+        // var css  =  $("#box").css("background-color");
+        // alert(css);
+        // });
+
+
+
+        
+    //     $("#btn").click(function(){
+    //    $("#box").css("background-color", "yellow");
+    //     });
+
+
+
+    // $("#btn").click(function(){
+    //    $("#box").css({
+    //        "background-color": "yellow",
+    //        "border": "5px solid black"
+    //    });
+    //     });
+
+
+
+    // $("#btn").click(function(){
+    //  var data =  $("#box").width();
+    //    alert(data);
+    //     });
+
+
+
+    // $("#btn").click(function(){
+    //  var data =  $("#box").height();
+    //    alert(data);
+    //     });
+
+
+
+    // $("#btn").click(function(){
+    //  var data =  $("#box").innerWidth();
+    //    alert(data);
+    //     });
+
+
+    // $("#btn").click(function(){
+    //  var data =  $("#box").innerHeight();
+    //    alert(data);
+    //     });
+
+
+
+    // $("#btn").click(function(){
+    //  var data =  $("#box").outerWidth();
+    //    alert(data);
+    //     });
+
+
+
+        
+    // $("#btn").click(function(){
+    //  var data =  $("#box").outerHeight();
+    //    alert(data);
+    //     });
+
+
+
+
+        
+    // $("#btn").click(function(){
+    //  var data =  $("#box").outerWidth(true);
+    //    alert(data);
+    //     });
+
+
+    // $("#btn").click(function(){
+    //  var data =  $("#box").outerHeight(true);
+    //    alert(data);
+    //     });
+
+
+        
+        // var elm = $("#span1").parent();
+        // elm.css("border", "1px solid red");
+
+
+        
+        // var elm = $("#span1").parents();
+        // elm.css("border", "1px solid red");
+
+        // var elm = $("#span1").parentsUntil("body");
+        // elm.css("border", "1px solid red");
+
+
+    //   var elm =  $("#list").children();
+    //   elm.css("border", "1px solid red");
+
+    // var elm =  $("#list").find("#span2");
+    // elm.css("border", "1px solid red");
+
+    // var elm =   $("#item1").siblings();
+    // elm.css("border", "1px solid red");
+
+
+
+    // var elm =   $("#item1").next().next();
+    // elm.css("border", "1px solid red");
+
+
+    
+    // var elm =   $("#item1").nextAll();
+    // elm.css("border", "1px solid red");
+
+
+     
+    // var elm =   $("#item1").nextUntil("#item2");
+    // elm.css("border", "1px solid red");
+
+    // var elm =   $("#item1").prevUntil("#item3");
+    // elm.css("border", "1px solid red");
+
+    // var elm =   $("#item1").prev();
+    // elm.css("border", "1px solid red");
+
+
+    // var elm =   $("#item1").prevAll();
+    // elm.css("border", "1px solid red");
+
+
+        // $("#btn").click(function(){
+        //     $("#pra").text("Text Changed");
+        // });
+
+        // $.noConflict();
+
+        // jQuery("#btn").click(function(){
+        //     jQuery("#pra").text("Text Changed");
+        // });
+
+    //  var jQ  = $.noConflict();
+
+    //     jQ("#btn").click(function(){
+    //         jQ("#pra").text("Text Changed");
+    //     });
+
+
+    
+
+    </script>
+
+    <!-- <p id="pra">This is a p1</p>
+    <p class="black">This is a p2</p>
+    <p class="black">This is a p3</p>
+    <a href="#"  class="black">Link</a> -->
+
+    <!-- <script>
+        $("p").hide();
+        $("#pra").hide();
+        $(".black").hide();
+        $("p.black").hide();
+        $("*").hide();
+    </script> -->
+
+
+   <!-- <script>
+       $(document).ready(function(){
+        alert("ok");
+       });
+   </script>  -->
+</body>
+</html>
